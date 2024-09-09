@@ -12,7 +12,7 @@ def isWinner(x, nums):
         return None
     score = {"Maria": 0, "Ben": 0}
     for n in nums:
-        if type(n) is not int or n <= 0:
+        if type(n) is not int:
             return None
         numbers = list(range(1, n + 1))
         rocket = ["Maria", "Ben", ""]
