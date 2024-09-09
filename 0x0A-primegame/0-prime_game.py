@@ -13,7 +13,7 @@ def isWinner(x, nums):
                         numbers.remove(i)
                 rocket[2] = rocket[0]
                 rocket[0] = rocket[1]
-                rocket[2] = rocket[1]
+                rocket[1] = rocket[2]
             score[rocket[1]] += 1
         else:
             score["Ben"] += 1
