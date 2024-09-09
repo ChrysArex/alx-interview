@@ -1,12 +1,20 @@
 #!/usr/bin/python3
+"""This module define a fuction that return the winner of the prime game"""
+
 
 def isWinner(x, nums):
+    """For each number in nums the function execute the sieve of eratosthen
+       and attribut each removal to Maria and Ben succesively. By doing so the
+       function identify the winner for each turn and cummulate the points to
+       have the final winner.
+    """
     score = {"Maria": 0, "Ben": 0}
     for n in nums:
         numbers = list(range(1, n + 1))
         rocket = ["Maria", "Ben", ""]
         if len(numbers) > 1:
             while (len(numbers) != 1):
+                print(rocket[0])
                 target = numbers[1]
                 for i in numbers[1:]:
                     if i % target == 0:
