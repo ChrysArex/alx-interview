@@ -8,13 +8,16 @@ def isWinner(x, nums):
        function identify the winner for each turn and cummulate the points to
        have the final winner.
     """
+    if x <= 0:
+        return None
     score = {"Maria": 0, "Ben": 0}
     for n in nums:
+        if type(n) is not int:
+            return None
         numbers = list(range(1, n + 1))
         rocket = ["Maria", "Ben", ""]
         if len(numbers) > 1:
             while (len(numbers) != 1):
-                print(rocket[0])
                 target = numbers[1]
                 for i in numbers[1:]:
                     if i % target == 0:
